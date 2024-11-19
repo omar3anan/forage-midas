@@ -19,7 +19,8 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 server:
-    port: 5000
-
-
-
+    port: 5000 
+logging:
+  level:
+    com.jpmc.midascore.TaskOneTests: INFO
+    root: INFO
