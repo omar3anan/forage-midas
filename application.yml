@@ -20,8 +20,6 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 server:
     port: 5000
-logging:
-  level:
-    com.jpmc.midascore: INFO
+
 
 
