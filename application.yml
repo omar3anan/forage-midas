@@ -1,0 +1,27 @@
+general:
+   kafka-topic: my-kafka-topic
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  kafka:
+    bootstrap-servers: localhost:9092  # Replace with your Kafka server address
+    consumer:
+      group-id: my-consumer-group  # Replace with your Kafka consumer group
+    producer:
+      acks: all  # Optional: Ensure producer acks settings if required
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+server:
+    port: 5000
+logging:
+  level:
+    com.jpmc.midascore: INFO
+
+
